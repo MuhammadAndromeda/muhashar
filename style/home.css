@@ -752,6 +752,7 @@ nav i{
 .hide{
     position: absolute;
     top: 0;
+    right: -10000px;
     visibility: hidden;
 }
 
