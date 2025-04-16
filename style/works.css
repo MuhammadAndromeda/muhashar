@@ -170,16 +170,23 @@ nav i{
     letter-spacing: 1px;
 }
 
+.hero img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
 @media (max-width: 800px) {
     nav i{
         visibility: visible;
-    }
+    }    
 
     nav .links,
     nav .logo{
         visibility: hidden;
-    }
-}
+    }    
+}    
 
 .wraper{
     width: 100%;
@@ -188,16 +195,16 @@ nav i{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}    
 
-.hero img{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+.wraper h1{
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
 }
-
-/* Container Style */
 
 footer{
     width: 100%;
