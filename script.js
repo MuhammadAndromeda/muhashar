@@ -14,7 +14,7 @@ const texts = [
     "SEO Expert",
 ]
 
-let speed = 100;
+let speed = 130;
 
 const textElement = document.querySelector(".typewriter-text");
 
@@ -25,7 +25,7 @@ function typeWriter(){
     if(characterIndex < texts[textIndex].length){
         textElement.innerHTML += texts[textIndex].charAt(characterIndex);
         characterIndex++;
-        setTimeout(typeWriter,speed)
+        setTimeout(typeWriter, speed)
     }
 
     else{
@@ -36,7 +36,7 @@ function typeWriter(){
 function eraseText(){
     if(textElement.innerHTML.length > 0){
         textElement.innerHTML = textElement.innerHTML.slice(0,-1)
-        setTimeout(eraseText, 50)
+        setTimeout(eraseText, 100)
     }
     else{
         textIndex = (textIndex + 1)%texts.length;

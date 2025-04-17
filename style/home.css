@@ -506,7 +506,7 @@ nav i{
     height: auto;
     max-width: 100%;
     margin-bottom: 10px;
-    padding: 50px 50px;
+    padding: 50px 70px;
     background-image: url(../items/bg1.png);
     background-size: cover;
     background-position: top;
@@ -536,7 +536,7 @@ nav i{
 }
 
 .aboutme p{
-    width: 85%;
+    width: 100%;
     height: auto;
     max-width: 100%;
     margin-bottom: 30px;
