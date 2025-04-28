@@ -29,7 +29,7 @@ function typeWriter(){
     }
 
     else{
-        setTimeout(eraseText,1000)
+        setTimeout(eraseText, 1000)
     }
 }
 
