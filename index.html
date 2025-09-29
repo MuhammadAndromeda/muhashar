@@ -5,310 +5,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Personal Portfolio Muhashar</title>
     <link rel="icon" href="items/icon.png" type="logo" style="width: auto; height: 1vh;">
-    <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/output.css">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
 </head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Navbar -->
-        <nav>
-            <a href="index.html" class="logo"><h1>Muhashar.</h1></a>
-            <div class="links">
-                <a href="index.html" class="active">Home</a>
-                <a href="profile.html" class="inac">Profile</a>
-                <a href="works.html" class="inac">Works</a>
-                <a href="experiences.html" class="inac">Experiences</a>
+<body class="font-plusjakarta overflow-x-hidden">
+    <section class="w-full h-screen max-w-full bg-backdrop bg-cover bg-center bg-no-repeat relative overflow-hidden flex justify-end items-end" style="background-image: url(src/images/background.png);">
+        <nav class="fixed top-0 w-full h-auto py-6 px-15 bg-black/20 backdrop-blur-xs overflow-hidden flex justify-between items-center z-10">
+            <a href="#hero" class="text-white text-4xl font-black tracking-wide decoration-0 cursor-pointer invisible md:visible"><h1>Muhashar.</h1></a>
+            <div class="w-auto gap-3 flex justify-center items-center invisible md:visible">
+                <a href="index.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all bg-primary">Home</a>
+                <a href="profile.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Profile</a>
+                <a href="works.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Works</a>
+                <a href="experiences.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Experiences</a>
             </div>
 
-            <i class="fa-solid fa-bars" onclick="bars()"></i>
+            <i class="fa-solid fa-bars absolute right-8 text-white py-3 px-4 bg-secondary rounded-xl shadow-2xl text-2xl visible md:invisible" onclick="bars()"></i>
         </nav>
-        <!-- Navbar End -->
 
-        <!-- Shorted Navbar -->
-        <div class="short" id="short">
-            <div class="top">
-                <a href="index.html" class="logo"><h1>Muhashar.</h1></a>
-                <i class="fa-solid fa-xmark" onclick="cancel()"></i>
+        <aside class="fixed w-[80%] h-screen py-10 px-4 bg-black/60 backdrop-blur-xs flex flex-col justify-start items-center transition-all translate-x-full z-20" id="short">
+            <div class="w-full h-auto mb-12 flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold decoration-0 cursor-pointer"><h1>Muhashar.</h1></a>
+                <i class="fa-solid fa-xmark text-white py-3 px-4 bg-secondary rounded-xl shadow-2xl text-2xl font-medium" onclick="cancel()"></i>
             </div>
-            <div class="bot">
-                <div class="links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="profile.html">Profile</a>
-                    <a href="works.html">Works</a>
-                    <a href="experiences.html">Experiences</a>
+            <div class="w-full h-auto flex justify-center items-center">
+                <div class="w-full gap-2.5 flex flex-col justify-center items-end">
+                    <a href="index.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md bg-primary">Home</a>
+                    <a href="profile.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Profile</a>
+                    <a href="works.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Works</a>
+                    <a href="experiences.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Experiences</a>
                 </div>
             </div>
-        </div>
-        <!-- Shorted Navbar End -->
+        </aside>
 
-        <!-- Hero Main Content -->
-        <div class="wraper">
-            <div class="media" data-aos="fade-up" data-aos-duration="1300">
-                <a href="https://youtube.com/qarhidn"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://instagram.com/qarh_project"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/andromeda-harahap-9b893030b/"><i class="fa-brands fa-linkedin"></i></a>
+        <div id="hero" class="w-full h-screen flex flex-col justify-center items-center relative overflow-x-hidden">
+            <div class="w-max h-auto mb-3 gap-7 flex justify-center items-center" data-aos="fade-up" data-aos-duration="1300">
+                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://youtube.com/@code-muhashar"><i class="fa-brands fa-youtube"></i></a>
+                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://instagram.com/qarh_project"><i class="fa-brands fa-instagram"></i></a>
+                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://www.linkedin.com/in/andromeda-harahap-9b893030b/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="herocon">
-                <h1 data-aos="fade-up" data-aos-duration="1300" data-aos-delay="400">Welcome To My<br><span>Portfolio Website</span></h1>
-                <a href="#" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="800">See More</a>
+            <div class="gap-6 flex flex-col justify-center items-center">
+                <h1 class="text-white text-4xl md:text-6xl text-center font-black tracking-wide leading-20" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="400">Welcome To My<br><span class="text-red-gradient2 text-[4rem]">Portfolio Website</span></h1>
+                <a href="#profile" class="text-white py-2.5 px-14 bg-primary border-2 border-secondary rounded-xl text-xl font-medium text-center tracking-wide transition-all hover:bg-transparent" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="800">See More</a>
             </div>
         </div>
-        <!-- Hero Main Content End -->
 
-        <!-- Footer Image -->
-        <img src="items/Vector.svg" alt="">
-        <!-- Footer Image End -->
+        <img class="absolute w-full h-auto max-w-full" src="src/images/Vector.svg" alt="Vector">
     </section>
-    <!-- Hero Section -->
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="aboutcon">
-            <img src="items/IMG.jpg" alt="Muhashar" data-aos="fade-right" data-aos-duration="1300" data-aos-delay="300">
-            <div class="profile" data-aos="fade-left" data-aos-duration="1300" data-aos-delay="300">
-                <div class="protle">
-                    <h2>Hello There! I'm...</h2>
-                    <h1>Andromeda Harahap</h1>
-                    <div class="typewriter"><span class="typewriter-text"></span><label for=""> |</label></div>
+    <section id="profile" class="w-full h-auto py-14 px-8 bg-backdrop-main gap-8 relative flex flex-col justify-center items-center">
+        <div class="w-full h-auto max-w-full mb-12 gap-14 flex flex-col md:flex-row justify-center items-center">
+            <img src="src/images/IMG.jpg" class="w-[80%] md:w-[30%] h-[30vh] md:h-full max-w-full rounded-4xl object-cover object-top md:object-center shadow-red cursor-pointer transition-all" alt="Muhashar" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
+            <div class="w-full md:w-1/2 h-auto flex flex-col justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
+                <div class="w-full h-auto max-w-full mb-3 flex flex-col justify-center items-center">
+                    <h2 class="w-full h-auto mb-2 text-white text-xl md:text-3xl text-center md:text-left font-medium tracking-wide">Hello There! I'm...</h2>
+                    <h1 class="w-full h-auto mb-5 text-red-gradient2 text-5xl text-center md:text-left font-black tracking-wide">Andromeda Harahap</h1>
+                    <div class="w-full text-center md:text-left"><span class="text-white text-2xl md:text-4xl font-extrabold tracking-wide" id="typewriter-text"></span><label class="text-2xl md:text-4xl text-white font-black"> |</label></div>
                 </div>
-                <p>Here, you can see my profiles and explore the skills I offer. You can also view and access my works and projects I have done.</p>
-                <div class="proskill">
-                    <a href="#">Web Development</a>
-                    <a href="#">HTML/CSS</a>
-                    <a href="#">JavaScript</a>
-                    <a href="#">Tailwind CSS</a>
-                    <a href="#">And So On...</a>
+                <p class="w-full h-auto mb-6 text-white text-base text-justify font-normal tracking-wide">Here, you can see my profiles and explore the skills I offer. You can also view and access my works and projects I have done.</p>
+                <div class="w-full h-auto mb-9 gap-3 md:gap-5 grid grid-cols-2 md:grid-cols-3 justify-center items-center">
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">HTML/CSS</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">JavaScript</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">CSS Frameworks</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">Python</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">PHP Laravel</a>
                 </div>
-                <div class="prombol">
-                    <a href="#">See More <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="w-full h-auto max-w-full flex justify-center md:justify-start items-center">
+                    <a class="w-full md:w-50 py-2.5 text-white bg-primary border-2 border-secondary rounded-xl text-base text-center font-normal tracking-wider transition-all hover:bg-transparent" href="#">See More <i class="fa-solid fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
         </div>
-        <div class="aboutme">
-            <h1 data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">About Me</h1>
-            <p data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600"><span>Andromeda Harahap:</span> a passionate web developer with a keen interest in creating dynamic and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript, and I'm always eager to learn new technologies and improve my skills. In my free time, I enjoy exploring new programming languages and frameworks, as well as contributing to open-source projects.</p>
-            <div class="tombols" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
-                <a href="#"><i class="fa-solid fa-arrow-down"></i> Download CV</a>
-                <a href="#"><i class="fa-solid fa-code"></i> View Projects</a>
+
+        <div class="w-full md:w-[90%] h-auto max-w-full mb-10 p-8 md:py-12 md:px-18 bg-cover bg-top bg-no-repeat border-2 border-secondary rounded-3xl shadow-primary overflow-hidden flex flex-col justify-center items-center" style="background-image: url(src/images/bg1.png);">
+            <h1 class="mb-5 text-primary text-center text-4xl md:text-5xl font-extrabold tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">About Me</h1>
+            <p class="w-full max-w-full mb-5 md:mb-8 text-white text-sm md:text-base text-justify md:text-center font-normal tracking-wide leading-8" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600"><span class="text-base md:text-lg font-bold tracking-wide">Andromeda Harahap:</span> a passionate web developer with a keen interest in creating dynamic and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript, and I'm always eager to learn new technologies and improve my skills. In my free time, I enjoy exploring new programming languages and frameworks, as well as contributing to open-source projects.</p>
+            <div class="w-full gap-5 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
+                <a href="src/images/canva.png" download="Andromeda_Harahap_CV.png" class="text-white bg-primary hover:bg-transparent backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-arrow-down"></i> Download CV</a>
+                <a href="#" class="text-white bg-transparent hover:bg-primary backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-code"></i> View Projects</a>
             </div>
         </div>
     </section>
-    <!-- About Section End -->
 
-    <!-- Works Section -->
-    <section class="library">
-        <!-- Library Header -->
-        <div class="upper">
-            <h1 data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Portfolio Library</h1>
-            <p data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">Contains everything about the achievements, skills and certificates that I have received so far, here also explains the background and process of how all these achievements can be achieved.</p>
-            <div class="libraryList" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
-                <button id="certButton" onclick="showCert()"><i class="fa-solid fa-bookmark"></i> Certificate</button>
-                <button id="projButton" onclick="showProject()"><i class="fa-solid fa-code"></i> Projects</button>
-                <button id="achButton"  onclick="showAchiev()"><i class="fa-solid fa-layer-group"></i> Achievement</button>
+    <section class="w-full h-auto px-0 md:px-8 bg-backdrop-main overflow-hidden flex flex-col justify-center items-center">
+        <div class="w-full max-w-full h-auto mb-10 flex flex-col justify-center items-center">
+            <h1 class="w-full md:w-max mb-3 text-red-gradient2 text-4xl md:text-5xl font-extrabold text-center tracking-wide leading-normal" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Portfolio Library</h1>
+            <p class="w-full max-w-full px-8 md:px-50 mb-6 text-white text-xs md:text-base text-center font-extralight md:font-light tracking-wider md:tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">Contains everything about the achievements, skills and certificates that I have received so far, here also explains the background and process of how all these achievements can be achieved.</p>
+            <div class="w-full h-auto gap-4 md:gap-8 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="certButton" onclick="showCert()"><i class="fa-solid fa-bookmark"></i> Certificate</button>
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="projButton" onclick="showProject()"><i class="fa-solid fa-code"></i> Projects</button>
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="achButton"  onclick="showAchiev()"><i class="fa-solid fa-layer-group"></i> Achievement</button>
             </div>
         </div>
-        <!-- Library Header End -->
 
-        <!-- Library Container -->
-        <div class="libcon" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="1200">
-            <!-- Certificate Library -->
-            <div class="libcard" id="certificate">
-                <div class="card">
-                    <img src="items/html.jpg" alt="">
-                    <div class="cardcon">
-                        <h1>HTML Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+        <div class="w-full h-auto max-w-full pb-12 gap-8 md:gap-12 flex justify-center items-start" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="1200">
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="certificate">
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/html.jpg" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">HTML Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/css.jpg" alt="">
-                    <div class="cardcon">
-                        <h1>CSS Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/css.jpg" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">CSS Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/js.jpg" alt="">
-                    <div class="cardcon">
-                        <h1>JavaScript Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/js.jpg" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">JavaScript Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/web.png" alt="">
-                    <div class="cardcon">
-                        <h1>Web Competition Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/web.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Web Competition Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/wordpress.png" alt="">
-                    <div class="cardcon">
-                        <h1>WordPress Course Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/wordpress.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">WordPress Course Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/ikcc.png" alt="">
-                    <div class="cardcon">
-                        <h1>#13th International Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ikcc.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide"1>#13th International Certificate</h>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/canva.png" alt="">
-                    <div class="cardcon">
-                        <h1>Canva Course Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/canva.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Canva Course Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/fusiontech.png" alt="">
-                    <div class="cardcon">
-                        <h1>Web Competition Certificate</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/fusiontech.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Web Competition Certificate</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
             </div>
-            <!-- Certificate Library End -->
 
-            <!-- Project Library -->
-            <div class="libcard" id="projects">
-                <div class="card">
-                    <img src="items/project1.png" alt="">
-                    <div class="cardcon">
-                        <h1>Nusture Website</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="https://muhammadandromeda.github.io/nusture">See Details</a>
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="projects">
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project1.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Nusture Website</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/nusture">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/project2.png" alt="">
-                    <div class="cardcon">
-                        <h1>LeafGreen Website</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="https://muhammadandromeda.github.io/LeafGreen/">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project2.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">LeafGreen Website</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/LeafGreen/">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/project3.png" alt="">
-                    <div class="cardcon">
-                        <h1>Network Boy Portfolio Website</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="https://muhammadandromeda.github.io/alvin/">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project3.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Network Boy Portfolio Website</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/alvin/">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/project4.png" alt="">
-                    <div class="cardcon">
-                        <h1>XOURCE Website</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="https://muhammadandromeda.github.io/xource/">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project4.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">XOURCE Website</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/xource/">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/project5.png" alt="">
-                    <div class="cardcon">
-                        <h1>Company Logo Design</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project5.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Company Logo Design</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/project6.png" alt="">
-                    <div class="cardcon">
-                        <h1>NeoCode Website</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a href="#">See Details</a>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project6.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">NeoCode Website</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
+                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
                     </div>
                 </div>
             </div>
-            <!-- Project Library End-->
 
-            <!-- Achievement Library -->
-            <div class="libcard" id="achievement">
-                <div class="card">
-                    <img src="items/ach1.jpg" alt="">
-                    <div class="cardcon">
-                        <h1>1st Design Web Competition</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="achievement">
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach1.jpg" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">1st Design Web Competition</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/ach2.png" alt="">
-                    <div class="cardcon">
-                        <h1>IT Trainer in High School</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach2.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">IT Trainer in High School</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/ach3.png" alt="">
-                    <div class="cardcon">
-                        <h1>Python Coding Competition</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach3.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Python Coding Competition</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="items/ach4.png" alt="">
-                    <div class="cardcon">
-                        <h1>Speaker in Middle School</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach4.png" alt="">
+                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Speaker in Middle School</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
                     </div>
                 </div>
             </div>
-            <!-- Achievement Library End-->
-        </div>
-        <!-- Library Container End -->
-    </section>
-    <!-- Works Section End -->
-
-    <!-- Closing Section -->
-    <section class="closing">
-        <h1 data-aos="fade-up" data-aos-duration="1300">Ready To Start a <span>Project</span> Together?</h1>
-        <p data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">I'm now available for freelance and internship work. Have any projects in your mind? Just feel free to contact me</p>
-        <div class="closebutton" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">
-            <a href="#">Contact Me</a>
-            <a href="#">Download My CV</a>
         </div>
     </section>
-    <!-- Closing Section End -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="head">
-            <div class="nav">
-                <a class="active" href="index.html">Home</a>
-                <a class="inac" href="profile.html">Profile</a>
-                <a class="inac" href="works.html">Works</a>
-                <a class="inac" href="experiences.html">Experiences</a>
+    <section class="w-full h-auto py-20 px-8 bg-backdrop flex flex-col justify-center items-center">
+        <h1 class="mb-5 md:mb-3 text-white text-3xl md:text-4xl text-center font-bold tracking-wide leading-normal" data-aos="fade-up" data-aos-duration="1300">Ready To Start a <span>Project</span> Together?</h1>
+        <p class="w-full md:w-[55%] h-auto max-w-full mb-8 text-white text-base md:text-lg text-center font-normal tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">I'm now available for freelance and internship work. Have any projects in your mind? Just feel free to contact me</p>
+        <div class="w-full h-auto gap-8 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">
+            <a class="w-full md:w-auto py-3 px-0 md:px-8 bg-primary border-2 border-transparent rounded-2xl text-white text-lg text-center font-medium transition-solid hover:bg-transparent hover:border-secondary" href="https://wa.me/+62811162409">Contact Me</a>
+            <a class="w-full md:w-auto py-3 px-0 md:px-8 bg-transparent border-2 border-secondary rounded-2xl text-white text-lg text-center font-medium transition-solid hover:bg-primary hover:border-transparent" download="Andromeda_Harahap_CV.png" href="#">Download My CV</a>
+        </div>
+    </section>
+
+    <footer class="w-full py-20 px-12 bg-backdrop-main relative overflow-hidden flex flex-col justify-center items-center">
+        <div class="w-full max-w-full mb-3 flex justify-start items-center">
+            <div class="gap-3 mb-5 grid md:flex grid-cols-2 md:grid-cols-none justify-center items-center">
+                <a class="py-2 px-6 bg-primary rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="index.html">Home</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="profile.html">Profile</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="works.html">Works</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="experiences.html">Experiences</a>
             </div>
         </div>
-        <div class="foot">
-            <p class="copy">&copy; 2025-Andromeda-Harahap. All right reserved</p>
-            <div class="contact">
-                <p><i class="fa-regular fa-envelope"></i> 2009.andromeda@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> +62 811-162-409</p>
+        <div class="w-full gap-8 flex flex-col md:flex-row justify-start md:justify-between items-start">
+            <p class="w-full text-white text-base md:text-xl text-center md:text-left font-normal tracking-wide">&copy; 2025-Andromeda-Harahap. All right reserved</p>
+            <div class="w-full max-w-full gap-3 md:gap-4 flex flex-col justify-center items-center">
+                <a class="w-full text-white text-base text-center md:text-right font-normal tracking-wide" href="mailto:2009.andromeda@gmail.com"><i class="fa-regular fa-envelope mr-2"></i> 2009.andromeda@gmail.com</a>
+                <a class="w-full text-white text-base text-center md:text-right font-normal tracking-wide" href="https://wa.me/+62811162409"><i class="fa-solid fa-phone mr-2"></i> +62 811-162-409</a>
             </div>
         </div>
     </footer>
-    <!-- Footer End -->
 
-    <!-- Script -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <!-- Script End -->
 </body>
 </html>

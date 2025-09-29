@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+}
+
+@theme {
+  --color-primary: #CF2D32;
+  --color-secondary: #86252A;
+  --color-backdrop-main: #151515;
+  --color-backdrop: #1E1E1E;
+
+  --font-plusjakarta: 'Plus Jakarta Sans', sans-serif;
+
+  --shadow-red: 0px 0px 20px 3px #CF2D32;
+
+  --blur-xxs: 2px;
+
+  --tracking-tightest: -0.1em;
+}
+
+@utility text-red-gradient {
+  background: linear-gradient(90deg, #86252A, #CF2D32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility text-red-gradient2 {
+  background: linear-gradient(90deg, #CF2D32, #86252A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility text-hover-gradient {
+  background: linear-gradient(90deg, #CF2D32, #86252A);
+  -webkit-text-fill-color: white;
+}
+
+@utility transition-solid {
+  transition: all 0.3s ease-in-out;
+}
+
+@utility visit {
+  background: linear-gradient(45deg, #CF2D32, #86252A);
+  box-shadow: 0px 0px 8px 0px #CF2D32;
+}
+
+@utility unvisited {
+  background-color: #252525;
+}
+
+@utility show {
+  position: relative;
+  visibility: visible;
+}
+
+@utility hide {
+  position: absolute;
+  top: 0;
+  right: -10000px;
+  visibility: hidden;
+}

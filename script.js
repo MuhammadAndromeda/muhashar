@@ -1,22 +1,24 @@
 const short = document.getElementById('short');
 
 function bars(){
-    short.style.transform = 'translateX(0)';
+    short.classList.replace('translate-x-full', 'translate-x-0');
 }
 
 function cancel(){
-    short.style.transform = 'translateX(3000px)';
+    short.classList.replace('translate-x-0', 'translate-x-full');
 }
 
 const texts = [
-    "Front-End Developer",
-    "UI Designer",
-    "SEO Expert",
+    "Full-Stack Developer",
+    "Public Speaker",
+    "Data Analyst",
+    "UI/UX Designer",
+    "Cyber Security Enthusiast",
 ]
 
-let speed = 130;
+let speed = 100;
 
-const textElement = document.querySelector(".typewriter-text");
+const textElement = document.getElementById("typewriter-text");
 
 let textIndex = 0;
 let characterIndex = 0;
@@ -36,7 +38,7 @@ function typeWriter(){
 function eraseText(){
     if(textElement.innerHTML.length > 0){
         textElement.innerHTML = textElement.innerHTML.slice(0,-1)
-        setTimeout(eraseText, 100)
+        setTimeout(eraseText, 80)
     }
     else{
         textIndex = (textIndex + 1)%texts.length;
@@ -60,17 +62,17 @@ project.classList.add('hide');
 achiev.classList.add('hide');
 
 certButton.classList.add('visit');
-projButton.classList.add('unvis');
-achButton.classList.add('unvis');
+projButton.classList.add('unvisited');
+achButton.classList.add('unvisited');
 
 function showCert(){
     certi.classList.replace('hide', 'show');
     project.classList.replace('show', 'hide');
     achiev.classList.replace('show', 'hide');
 
-    certButton.classList.replace('unvis', 'visit');
-    projButton.classList.replace('visit', 'unvis');
-    achButton.classList.replace('visit', 'unvis');
+    certButton.classList.replace('unvisited', 'visit');
+    projButton.classList.replace('visit', 'unvisited');
+    achButton.classList.replace('visit', 'unvisited');
 }
 
 function showProject(){
@@ -78,9 +80,9 @@ function showProject(){
     project.classList.replace('hide', 'show');
     achiev.classList.replace('show', 'hide');
 
-    certButton.classList.replace('visit', 'unvis');
-    projButton.classList.replace('unvis', 'visit');
-    achButton.classList.replace('visit', 'unvis');
+    certButton.classList.replace('visit', 'unvisited');
+    projButton.classList.replace('unvisited', 'visit');
+    achButton.classList.replace('visit', 'unvisited');
 }
 
 function showAchiev(){
@@ -88,7 +90,7 @@ function showAchiev(){
     project.classList.replace('show', 'hide');
     achiev.classList.replace('hide', 'show');
 
-    certButton.classList.replace('visit', 'unvis');
-    projButton.classList.replace('visit', 'unvis');
-    achButton.classList.replace('unvis', 'visit');
+    certButton.classList.replace('visit', 'unvisited');
+    projButton.classList.replace('visit', 'unvisited');
+    achButton.classList.replace('unvisited', 'visit');
 }
