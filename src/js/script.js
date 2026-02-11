@@ -9,11 +9,10 @@ function cancel(){
 }
 
 const texts = [
-    "Full-Stack Developer",
-    "Public Speaker",
-    "Data Analyst",
-    "UI/UX Designer",
-    "Cyber Security Enthusiast",
+    "Frontend Developer",
+    "Backend Developer",
+    "Fullstack Developer",
+    "WordPress Developer",
 ]
 
 let speed = 100;

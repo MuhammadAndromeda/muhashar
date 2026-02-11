@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
 </head>
-<body class="font-plusjakarta overflow-x-hidden">
-    <section class="w-full h-screen max-w-full bg-backdrop bg-cover bg-center bg-no-repeat relative overflow-hidden flex justify-end items-end" style="background-image: url(src/images/background.png);">
+<body class="font-plusjakarta overflow-x-hidden bg-fixed bg-center bg-no-repeat bg-cover" style="background-image: url(src/assets/images/background.png);">
+    <section class="w-full h-screen max-w-full bg-backdrop bg-cover bg-center bg-no-repeat relative overflow-hidden flex justify-end items-end" style="background-image: url(src/assets/images/background.png);">
         <nav class="fixed top-0 w-full h-auto py-6 px-15 bg-black/20 backdrop-blur-xs overflow-hidden flex justify-between items-center z-10">
-            <a href="#hero" class="text-white text-4xl font-black tracking-wide decoration-0 cursor-pointer invisible md:visible"><h1>Muhashar.</h1></a>
+            <a href="#" class="text-white text-4xl font-black tracking-wide decoration-0 cursor-pointer invisible md:visible"><h1>Muhashar.</h1></a>
             <div class="w-auto gap-3 flex justify-center items-center invisible md:visible">
-                <a href="index.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all bg-primary">Home</a>
-                <a href="profile.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Profile</a>
-                <a href="works.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Works</a>
-                <a href="experiences.html" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Experiences</a>
+                <a href="#" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all bg-primary">Home</a>
+                <a href="#profile" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Profile</a>
+                <a href="#works" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Works</a>
+                <a href="#works" onclick="showAchiev()" class="text-white py-1.5 px-6 rounded-sm text-base font-medium decoration-0 text-center tracking-wider transition-all hover:bg-backdrop">Experiences</a>
             </div>
 
             <i class="fa-solid fa-bars absolute right-8 text-white py-3 px-4 bg-secondary rounded-xl shadow-2xl text-2xl visible md:invisible" onclick="bars()"></i>
@@ -31,247 +31,466 @@
 
         <aside class="fixed w-[80%] h-screen py-10 px-4 bg-black/60 backdrop-blur-xs flex flex-col justify-start items-center transition-all translate-x-full z-20" id="short">
             <div class="w-full h-auto mb-12 flex justify-between items-center">
-                <a href="index.html" class="text-white text-2xl font-bold decoration-0 cursor-pointer"><h1>Muhashar.</h1></a>
+                <a href="#" class="text-white text-2xl font-bold decoration-0 cursor-pointer"><h1>Muhashar.</h1></a>
                 <i class="fa-solid fa-xmark text-white py-3 px-4 bg-secondary rounded-xl shadow-2xl text-2xl font-medium" onclick="cancel()"></i>
             </div>
             <div class="w-full h-auto flex justify-center items-center">
                 <div class="w-full gap-2.5 flex flex-col justify-center items-end">
-                    <a href="index.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md bg-primary">Home</a>
-                    <a href="profile.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Profile</a>
-                    <a href="works.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Works</a>
-                    <a href="experiences.html" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Experiences</a>
+                    <a href="#" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md bg-primary">Home</a>
+                    <a href="#profile" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Profile</a>
+                    <a href="#works" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Works</a>
+                    <a href="#works" onclick="showAchiev()" class="w-full py-2.5 px-5 text-white text-left text-base font-normal tracking-wide rounded-md">Experiences</a>
                 </div>
             </div>
         </aside>
 
-        <div id="hero" class="w-full h-screen flex flex-col justify-center items-center relative overflow-x-hidden">
-            <div class="w-max h-auto mb-3 gap-7 flex justify-center items-center" data-aos="fade-up" data-aos-duration="1300">
-                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://youtube.com/@code-muhashar"><i class="fa-brands fa-youtube"></i></a>
-                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://instagram.com/qarh_project"><i class="fa-brands fa-instagram"></i></a>
-                <a class="w-15 h-15 p-4 text-red-gradient shadow-red rounded-full text-3xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://www.linkedin.com/in/andromeda-harahap-9b893030b/"><i class="fa-brands fa-linkedin"></i></a>
+        <div class="w-full h-screen gap-5 md:gap-3 flex flex-col justify-center items-center relative overflow-x-hidden">
+            <div class="w-max h-auto gap-7 flex justify-center items-center" data-aos="fade-up" data-aos-duration="1300">
+                <a class="w-10 md:w-15 h-10 md:h-15 p-4 text-red-gradient shadow-red rounded-full text-2xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://youtube.com/@code-muhashar"><i class="fa-brands fa-youtube"></i></a>
+                <a class="w-10 md:w-15 h-10 md:h-15 p-4 text-red-gradient shadow-red rounded-full text-2xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://instagram.com/qarh_project"><i class="fa-brands fa-instagram"></i></a>
+                <a class="w-10 md:w-15 h-10 md:h-15 p-4 text-red-gradient shadow-red rounded-full text-2xl md:text-[2rem] text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://www.linkedin.com/in/andromeda-harahap-9b893030b/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <div class="gap-6 flex flex-col justify-center items-center">
-                <h1 class="text-white text-4xl md:text-6xl text-center font-black tracking-wide leading-20" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="400">Welcome To My<br><span class="text-red-gradient2 text-[4rem]">Portfolio Website</span></h1>
-                <a href="#profile" class="text-white py-2.5 px-14 bg-primary border-2 border-secondary rounded-xl text-xl font-medium text-center tracking-wide transition-all hover:bg-transparent" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="800">See More</a>
+            <div class="gap-5 md:gap-6 flex flex-col justify-center items-center">
+                <h1 class="text-white text-2xl md:text-6xl text-center font-black tracking-wide leading-10 md:leading-20" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="400">Welcome To My<br><span class="text-red-gradient2 text-3xl md:text-[4rem]">Portfolio Website</span></h1>
+                <a href="#profile" class="text-white py-2.5 px-14 bg-primary border-2 border-secondary rounded-xl text-base md:text-xl font-medium text-center tracking-wide transition-all hover:bg-transparent" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="800">See More</a>
             </div>
         </div>
 
-        <img class="absolute w-full h-auto max-w-full" src="src/images/Vector.svg" alt="Vector">
+        <img class="absolute w-full h-auto max-w-full" src="src/assets/images/Vector.svg" alt="Vector">
     </section>
 
-    <section id="profile" class="w-full h-auto py-14 px-8 bg-backdrop-main gap-8 relative flex flex-col justify-center items-center">
+    <section id="profile" class="w-full h-auto py-14 px-5 md:px-8 bg-backdrop-main gap-8 relative flex flex-col justify-center items-center">
         <div class="w-full h-auto max-w-full mb-12 gap-14 flex flex-col md:flex-row justify-center items-center">
-            <img src="src/images/IMG.jpg" class="w-[80%] md:w-[30%] h-[30vh] md:h-full max-w-full rounded-4xl object-cover object-top md:object-center shadow-red cursor-pointer transition-all" alt="Muhashar" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
-            <div class="w-full md:w-1/2 h-auto flex flex-col justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
+            <img src="src/assets/images/myself.png" class="w-[80%] md:w-[30%] h-[30vh] md:h-full max-w-full rounded-4xl object-cover object-top md:object-center shadow-red cursor-pointer transition-all" alt="Muhashar" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
+            <div class="w-full md:w-1/2 h-auto flex flex-col justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="500">
                 <div class="w-full h-auto max-w-full mb-3 flex flex-col justify-center items-center">
                     <h2 class="w-full h-auto mb-2 text-white text-xl md:text-3xl text-center md:text-left font-medium tracking-wide">Hello There! I'm...</h2>
-                    <h1 class="w-full h-auto mb-5 text-red-gradient2 text-5xl text-center md:text-left font-black tracking-wide">Andromeda Harahap</h1>
+                    <h1 class="w-full h-auto mb-5 text-red-gradient2 text-[2.5rem] md:text-5xl text-center md:text-left font-black tracking-wide leading-normal">Andromeda Harahap</h1>
                     <div class="w-full text-center md:text-left"><span class="text-white text-2xl md:text-4xl font-extrabold tracking-wide" id="typewriter-text"></span><label class="text-2xl md:text-4xl text-white font-black"> |</label></div>
                 </div>
-                <p class="w-full h-auto mb-6 text-white text-base text-justify font-normal tracking-wide">Here, you can see my profiles and explore the skills I offer. You can also view and access my works and projects I have done.</p>
+                <p class="w-full h-auto mb-6 text-white text-sm md:text-base text-justify font-normal tracking-wide">Here, you can see my profiles and explore the skills I offer. You can also view and access my works and projects I have done.</p>
                 <div class="w-full h-auto mb-9 gap-3 md:gap-5 grid grid-cols-2 md:grid-cols-3 justify-center items-center">
                     <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">HTML/CSS</a>
                     <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">JavaScript</a>
-                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">CSS Frameworks</a>
-                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">Python</a>
                     <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">PHP Laravel</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">Python</a>
+                    <a class="py-3 bg-neutral-800 rounded-full text-white text-sm text-center font-normal tracking-wider">WordPress</a>
                 </div>
-                <div class="w-full h-auto max-w-full flex justify-center md:justify-start items-center">
-                    <a class="w-full md:w-50 py-2.5 text-white bg-primary border-2 border-secondary rounded-xl text-base text-center font-normal tracking-wider transition-all hover:bg-transparent" href="#">See More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                <div class="w-full h-auto max-w-full gap-4 flex flex-col md:flex-row justify-center md:justify-start items-center">
+                    <a href="#works" onclick="showProject()" class="w-full md:w-50 py-2.5 text-white bg-primary border-2 border-secondary rounded-xl text-base text-center font-normal tracking-wider transition-all hover:bg-transparent">See More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    <a href="src/assets/CV_Andromeda Harahap_Software Developer.pdf" download="CV_Andromeda Harahap_Software Developer.pdf" class="w-full md:w-50 py-2.5 text-white bg-transparent border-2 border-secondary rounded-xl text-base text-center font-normal tracking-wider transition-all hover:bg-primary">Download CV</a>
                 </div>
             </div>
         </div>
 
-        <div class="w-full md:w-[90%] h-auto max-w-full mb-10 p-8 md:py-12 md:px-18 bg-cover bg-top bg-no-repeat border-2 border-secondary rounded-3xl shadow-primary overflow-hidden flex flex-col justify-center items-center" style="background-image: url(src/images/bg1.png);">
+        <div class="w-full md:w-[90%] h-auto max-w-full mb-10 p-8 md:py-12 md:px-16 bg-cover bg-top bg-no-repeat border-2 border-secondary rounded-3xl shadow-primary overflow-hidden flex flex-col justify-center items-center" style="background-image: url(src/assets/images/bg1.png);">
             <h1 class="mb-5 text-primary text-center text-4xl md:text-5xl font-extrabold tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">About Me</h1>
-            <p class="w-full max-w-full mb-5 md:mb-8 text-white text-sm md:text-base text-justify md:text-center font-normal tracking-wide leading-8" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600"><span class="text-base md:text-lg font-bold tracking-wide">Andromeda Harahap:</span> a passionate web developer with a keen interest in creating dynamic and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript, and I'm always eager to learn new technologies and improve my skills. In my free time, I enjoy exploring new programming languages and frameworks, as well as contributing to open-source projects.</p>
+            <p class="w-full max-w-full mb-5 md:mb-8 text-white text-sm md:text-base text-justify md:text-center font-normal tracking-wide leading-8" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600"><span class="text-base md:text-lg font-bold tracking-wide">Andromeda Harahap:</span> is a Full-Stack Web Developer from Indonesia with over 1 year of experience in website development, both in full stack or CMS. Skilled in Laravel and ReactJS as his primary tech stack for developing a dynamic website. Passionate about leveraging technology to empower others, he thrives on delivering impactful and innovative digital experiences.</p>
             <div class="w-full gap-5 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
-                <a href="src/images/canva.png" download="Andromeda_Harahap_CV.png" class="text-white bg-primary hover:bg-transparent backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-arrow-down"></i> Download CV</a>
-                <a href="#" class="text-white bg-transparent hover:bg-primary backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-code"></i> View Projects</a>
+                <a href="src/assets/CV_Andromeda Harahap_Software Developer.pdf" download="CV_Andromeda Harahap_Software Developer.pdf" class="text-white bg-primary hover:bg-transparent backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-arrow-down"></i> Download CV</a>
+                <a href="#works" onclick="showProject()" class="text-white bg-transparent hover:bg-primary backdrop-blur-xxs border-2 border-secondary rounded-xl w-full md:w-auto py-2.5 md:py-3 px-0 md:px-8 text-base md:text-xl text-center font-bold transition-all duration-500 gap-1 md:gap-2 flex justify-center items-center"><i class="fa-solid fa-code"></i> View Projects</a>
             </div>
         </div>
     </section>
 
-    <section class="w-full h-auto px-0 md:px-8 bg-backdrop-main overflow-hidden flex flex-col justify-center items-center">
-        <div class="w-full max-w-full h-auto mb-10 flex flex-col justify-center items-center">
+    <section id="skill" class="w-full h-auto py-6 bg-backdrop relative flex justify-center items-center">
+        <div class="w-full overflow-x-hidden flex flex-row gap-30 justify-center items-center" id="scroller">
+            <div class="scroll-animation gap-5 shrink-0 flex justify-center items-center hover:[animation-play-state:paused]">
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/html-icon.svg" alt="html_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">HTML</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/css-icon.svg" alt="css_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">CSS</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/tailwind-icon.svg" alt="tailwind_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">tailwind</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/js-icon.svg" alt="js_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">JavaScript</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/react-icon.svg" alt="react_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">reactJS</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/php-icon.svg" alt="react_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">PHP</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/laravel-icon.svg" alt="react_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">Laravel</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/py-icon.svg" alt="python_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">python</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/wordpress-icon.svg" alt="wordpress_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">WordPress</p>
+                </div>
+                <div class="py-3 px-6 bg-zinc-800 rounded-2xl gap-3 flex justify-center items-center cursor-pointer group">
+                    <img src="src/assets/images/icons/figma-icon.svg" alt="figma_icon" class="w-auto h-9 max-w-full grayscale-100 group-hover:grayscale-0">
+                    <p class="text-white text-xl text-left font-bold capitalize tracking-widest">Figma</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="w-full h-auto py-6 px-0 md:px-8 bg-backdrop-main overflow-hidden flex flex-col justify-center items-center">
+        <header class="w-full max-w-full h-auto py-8 mb-5 flex flex-col justify-center items-center">
             <h1 class="w-full md:w-max mb-3 text-red-gradient2 text-4xl md:text-5xl font-extrabold text-center tracking-wide leading-normal" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Portfolio Library</h1>
             <p class="w-full max-w-full px-8 md:px-50 mb-6 text-white text-xs md:text-base text-center font-extralight md:font-light tracking-wider md:tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">Contains everything about the achievements, skills and certificates that I have received so far, here also explains the background and process of how all these achievements can be achieved.</p>
             <div class="w-full h-auto gap-4 md:gap-8 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="900">
-                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="certButton" onclick="showCert()"><i class="fa-solid fa-bookmark"></i> Certificate</button>
-                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="projButton" onclick="showProject()"><i class="fa-solid fa-code"></i> Projects</button>
-                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid" id="achButton"  onclick="showAchiev()"><i class="fa-solid fa-layer-group"></i> Achievement</button>
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid hover:scale-105" id="certButton" onclick="showCert()"><i class="fa-solid fa-bookmark"></i> Certificate</button>
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid hover:scale-105" id="projButton" onclick="showProject()"><i class="fa-solid fa-code"></i> Projects</button>
+                <button class="w-[80%] md:w-auto py-4 px-0 md:px-15 text-white text-lg md:text-xl text-center font-medium rounded-xl md:rounded-2xl tracking-wider cursor-pointer transition-solid hover:scale-105" id="achButton"  onclick="showAchiev()"><i class="fa-solid fa-layer-group"></i> Achievement</button>
             </div>
-        </div>
+        </header>
 
         <div class="w-full h-auto max-w-full pb-12 gap-8 md:gap-12 flex justify-center items-start" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="1200">
-            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="certificate">
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/html.jpg" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">HTML Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-10 flex flex-col justify-center items-center transition-all duration-500" id="certificate">
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/html.jpg" alt="HTML Certificate by Skilvul">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">HTML Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>HTML Fundamentals Certification:</b> Completed a structured learning program focused on core HTML concepts and practical web development foundations. A certificate awarded for successfully completing a foundational HTML course, demonstrating an understanding of core web structure, semantic markup, and best practices for building accessible and well-structured web pages.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/css.jpg" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">CSS Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/css.jpg" alt="CSS Certificate by Skilvul">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">CSS Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>CSS Fundamentals Certification:</b> Completed a structured learning program focused on core CSS concepts and practical styling techniques for modern web development. A certificate awarded for successfully completing a foundational HTML course, demonstrating an understanding of core web structure, semantic markup, and best practices for building accessible and well-structured web pages.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/js.jpg" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">JavaScript Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/js.jpg" alt="JavaScript Certificate by SoloLearn">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">JavaScript Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>Introduction to JavaScript Certification:</b> Completed a structured learning program focused on fundamental JavaScript concepts. A certificate awarded for successfully completing an introductory JavaScript course, demonstrating both theoretical and practical understanding of core programming principles such as variables, data types, conditional logic, loops, functions, and basic DOM manipulation.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/web.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Web Competition Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/wordpress.png" alt="WordPress Certificate by KursusDigital.id">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">WordPress Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>WordPress Development Fundamentals Course Completion:</b> Successfully completed an online learning program titled “WordPress from Beginner to Advanced” conducted by Kursus Digital. Throughout the program, participants gained foundational knowledge of how websites are built and managed, including an overview of web development workflows, content management systems, and WordPress architecture.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/wordpress.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">WordPress Course Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/fusiontech.png" alt="Programming by Project Competition Participation Certificate">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">Programming Competition Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>Programming Competition - FusionTech Challenge 2025:</b> Awarded a Certificate of Appreciation for participating as a contestant in the Programming by Project (Student Category) competition, held as part of the FusionTech Challenge 2025 at Universitas Teknologi Yogyakarta. As a member of the StackUnderflow team, this experience involved collaborative project planning, implementation of programming logic.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ikcc.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide"1>#13th International Certificate</h>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
-                    </div>
-                </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/canva.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Canva Course Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
-                    </div>
-                </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/fusiontech.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Web Competition Certificate</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                <div class="w-full max-w-full p-6 bg-backdrop rounded-xl gap-6 flex md:flex-row flex-col justify-between items-start transition-solid hover:shadow-sm shadow-gray-500">
+                    <img class="w-90 h-auto rounded-md object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/assets/images/certificates/web.png" alt="#1 Winner in Web Design Competition">
+                    <div class="w-full h-auto max-w-full py-4 gap-2 flex flex-col justify-center items-center">
+                        <h1 class="w-full text-white text-xl md:text-4xl text-center md:text-left font-bold tracking-wide">Web Design Competition Certificate</h1>
+                        <p class="text-white text-xs md:text-base text-justify font-light tracking-wide"><b>Web Design Competition Participation Certificate:</b> Awarded for active participation in a national-level web design competition held as part of the PNB IT Competition #16 x ECO (Electro Competition Olympic), organized by Politeknik Negeri Bali. Through this competition, participants were challenged to design and conceptualize web solutions that combine modern digital design principles.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="projects">
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project1.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Nusture Website</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/nusture">See Details</a>
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-15 grid grid-cols-1 md:grid-cols-3 justify-center items-center transition-all duration-500" id="projects">
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/nusture.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Nusture Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A website that presents the diverse and beautiful works of art across the Indonesian archipelago, showcased under the theme Indonesia Wonderland.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/nusture" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/nusture" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project2.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">LeafGreen Website</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/LeafGreen/">See Details</a>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/leafgreen.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">LeafGreen Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A company profile website that contains information about a residential property with all the sports and entertainment facilities available in an eco-friendly residential area.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/LeafGreen" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/LeafGreen" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project3.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Network Boy Portfolio Website</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/alvin/">See Details</a>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/alvin.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Portfolio Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A portfolio website showcasing the skills and experience of a Network Engineer, such as routing experience and international certifications like CCNA, is also included here.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/alvin" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/alvin" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project4.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">XOURCE Website</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="https://muhammadandromeda.github.io/xource/">See Details</a>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/xource.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">XOURCE Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A company profile website that provides dynamic and static website development services for both corporate commercial purposes and individual personal branding, called XOURCE.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/xource" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/xource" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project5.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Company Logo Design</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/techture.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Tecture Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A website that displays a timeline of technological developments and the results and benefits of technological developments that form the foundation of today's modern era.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/techtures" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/techture" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/project6.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">NeoCode Website</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo tempore odio numquam maxime alias delectus quasi doloremque perspiciatis enim?</p>
-                        <a class="w-full py-3 mt-5 bg-primary hover:bg-transparent border-2 border-transparent hover:border-secondary rounded-xl text-white text-sm md:text-base text-center font-medium tracking-wide transition-all duration-500" href="#">See Details</a>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/neocode.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">NeoCode Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A learning platform that provides online cource for Web and Android Development, hardware-based programming, cyber security, and UI/UX design, delivered by experienced mentors.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/neocode" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/neocode" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/jobskill.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Jobskill Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">An online course platform and job portal that have been merged into a single website providing online learning services on Digital skills, as well as job vacancy distribution services.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://jobskill.pages.dev" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/jobskill" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/perdana.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Company Profile Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A company profile website for a public company focused on manufacturing, specializing in the manufacture of filters and filtration systems for various industrial needs.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">CSS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://muhammadandromeda.github.io/perdana-mitrakencana" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/perdana-mitrakencana" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/Mexpo.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">MEXPO-15 Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A website that displays events organized by Airlangga University, such as the Stock Exchange Competition (UASTEC), Management Olympiad (MO), Bussiness Case Competition (NBCC), etc.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Laravel</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">PHP</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">AlpineJS</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://manajemenexpo15.com/" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/ammarayyasy/Mexpo-Fix" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/Waraloka.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Waraloka Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A website that aims to search for hidden gems among MSMEs in remote areas in Pamijahan, Bogor. The goal is to cultivate the MSME sector in remote areas.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Tailwind</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Splide JS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://waraloka.pages.dev/public" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/waraloka" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full h-auto max-w-full bg-secondary/40 rounded-2xl overflow-hidden flex flex-col justify-center items-center transition-solid shadow-lg shadow-primary/60">
+                    <img class=" w-full h-auto object-cover overflow-hidden transition-all duration-500" src="src/assets/images/projects/Pions.png" alt="">
+                    <div class="w-full h-auto p-5 max-w-full flex flex-col justify-center items-center">
+                        <div class="w-full mb-4 md:mb-5 gap-2 flex flex-col justify-center items-start">
+                            <h1 class="w-full text-white text-2xl text-left font-bold tracking-wide">Student Council Website</h1>
+                            <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A website that operates as the official website of an Student Council Organization containing the work programs of OSIS officials as well as voting features to digitize OSIS elections.</p>
+                        </div>
+                        <div class="w-full md:mb-9 mb-6 gap-2 flex flex-wrap justify-start items-center">
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">HTML</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">JavaScript</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Laravel</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">PHP</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">AlpineJS</p>
+                            <p class="py-1 px-6 rounded-full bg-secondary/60 border-2 border-primary/50 text-white/80 md:text-xs text-[0.7rem] text-center font-normal tracking-wider leading-normal">Git & Github</p>
+                        </div>
+                        <div class="w-full gap-3 flex justify-center items-center">
+                            <a href="https://github.com/MuhammadAndromeda/pions" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Live Demo</a>
+                            <a href="https://github.com/MuhammadAndromeda/pions" class="w-full py-3 rounded-lg hover:bg-primary bg-secondary/60 border-2 hover:border-secondary border-primary/50 text-white/80 text-sm text-center font-semibold shadow-md shadow-primary/60 transition-all duration-300">Github</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-20 grid grid-cols-1 md:grid-cols-2 justify-center items-center transition-all duration-500" id="achievement">
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach1.jpg" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">1st Design Web Competition</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+            <div class="w-full h-auto max-w-full gap-8 px-5 md:px-15 grid grid-cols-1 md:grid-cols-3 justify-center items-center transition-all duration-500" id="achievement">
+                <div class="w-full max-w-full h-80 bg-backdrop rounded-3xl cursor-pointer overflow-hidden relative group flex flex-col justify-center items-center">
+                    <img class=" w-full h-full object-cover overflow-hidden cursor-pointer transition-all duration-500 group-hover:scale-130" src="src/assets/images/achievements/ach1.jpg" alt="">
+                    <div class="w-full h-full max-w-full p-6 bg-black/80 absolute flex flex-col justify-center items-center top-80 group-hover:top-0 transition-all duration-300">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-center font-bold tracking-wide">1st Design Web Competition</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">I won first place in a frontend native website design competition using HTML and CSS at a polytechnic in Bali called Politeknik Negeri Bali in their event called PNBITC X ECO #16. Together with my colleagues and seniors, accompanied by one mentor, I won first place in this competition.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class="w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach2.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">IT Trainer in High School</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full h-80 bg-backdrop rounded-3xl cursor-pointer overflow-hidden relative group flex flex-col justify-center items-center">
+                    <img class=" w-full h-full object-cover overflow-hidden cursor-pointer transition-all duration-500 group-hover:scale-130" src="src/assets/images/achievements/ach2.png" alt="">
+                    <div class="w-full h-full max-w-full p-6 bg-black/80 absolute flex flex-col justify-center items-center top-80 group-hover:top-0 transition-all duration-300">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-center font-bold tracking-wide">IT Trainer</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Becoming a trainer at a secondary school and entrusted with teaching teachers and students about designing and creating simple websites using HTML and CSS, as well as teaching junior high school students about UI/UX design and game development with Scratch.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach3.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Python Coding Competition</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full h-80 bg-backdrop rounded-3xl cursor-pointer overflow-hidden relative group flex flex-col justify-center items-center">
+                    <img class=" w-full h-full object-cover overflow-hidden cursor-pointer transition-all duration-500 group-hover:scale-130" src="src/assets/images/achievements/ach3.png" alt="">
+                    <div class="w-full h-full max-w-full p-6 bg-black/80 absolute flex flex-col justify-center items-center top-80 group-hover:top-0 transition-all duration-300">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-center font-bold tracking-wide">Python Competition</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Together with my juniors and seniors, I participated in a Python Development competition held by an offline programming course institution called CodingBee Academy. Here, I was asked to create a To Do List App system using Python in the Python IDLE environment.</p>
                     </div>
                 </div>
-                <div class="w-full max-w-full p-7 bg-backdrop rounded-3xl flex flex-col justify-center items-center transition-solid hover:shadow-sm shadow-gray-500">
-                    <img class=" w-full h-auto md:h-[53vh] mb-5 object-contain overflow-hidden cursor-pointer transition-all duration-500" src="src/images/ach4.png" alt="">
-                    <div class="w-full h-auto max-w-full flex flex-col justify-center items-center">
-                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-left font-bold tracking-wide">Speaker in Middle School</h1>
-                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur libero vitae maiores adipisci ex praesentium fuga, sed sapiente facilis pariatur sit eius iure magni obcaecati, consectetur iusto officia a necessitatibus, aspernatur fugit minima assumenda. Dignissimos?</p>
+                <div class="w-full max-w-full h-80 bg-backdrop rounded-3xl cursor-pointer overflow-hidden relative group flex flex-col justify-center items-center">
+                    <img class=" w-full h-full object-cover overflow-hidden cursor-pointer transition-all duration-500 group-hover:scale-130" src="src/assets/images/achievements/ach4.png" alt="">
+                    <div class="w-full h-full max-w-full p-6 bg-black/80 absolute flex flex-col justify-center items-center top-80 group-hover:top-0 transition-all duration-300">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-center font-bold tracking-wide">Speaker in Seminar</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">A junior high school invited me to give a lecture to their students on the development and cultivation of programming techniques for the sustainability of technological development in the digital age. My friend and I presented the material in a structured manner and created a two-way conversation that allowed the school students to express their opinions and ask questions.</p>
+                    </div>
+                </div>
+                <div class="w-full max-w-full h-80 bg-backdrop rounded-3xl cursor-pointer overflow-hidden relative group flex flex-col justify-center items-center">
+                    <img class=" w-full h-full object-cover overflow-hidden cursor-pointer transition-all duration-500 group-hover:scale-130" src="src/assets/images/achievements/ach5.jpeg" alt="">
+                    <div class="w-full h-full max-w-full p-6 bg-black/80 absolute flex flex-col justify-center items-center top-80 group-hover:top-0 transition-all duration-300">
+                        <h1 class="w-full mb-2 text-white text-2xl md:text-3xl text-center font-bold tracking-wide">3rd Web Development Competition</h1>
+                        <p class="text-white text-xs md:text-sm text-justify font-light tracking-wide">I won third place with my teammates from the “Sawit Medan” team in a website development competition held at the Hackhit event organized by SMK IDN Akhwat and Universitas Islam 45 Bekasi (UNISMA) at the UNISMA campus itself.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="w-full h-auto py-20 px-8 bg-backdrop flex flex-col justify-center items-center">
+    <section class="w-full h-auto py-20 px-8 bg-backdrop-main/30 flex flex-col justify-center items-center">
         <h1 class="mb-5 md:mb-3 text-white text-3xl md:text-4xl text-center font-bold tracking-wide leading-normal" data-aos="fade-up" data-aos-duration="1300">Ready To Start a <span>Project</span> Together?</h1>
         <p class="w-full md:w-[55%] h-auto max-w-full mb-8 text-white text-base md:text-lg text-center font-normal tracking-wide" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">I'm now available for freelance and internship work. Have any projects in your mind? Just feel free to contact me</p>
         <div class="w-full h-auto gap-8 flex flex-col md:flex-row justify-center items-center" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="600">
             <a class="w-full md:w-auto py-3 px-0 md:px-8 bg-primary border-2 border-transparent rounded-2xl text-white text-lg text-center font-medium transition-solid hover:bg-transparent hover:border-secondary" href="https://wa.me/+62811162409">Contact Me</a>
-            <a class="w-full md:w-auto py-3 px-0 md:px-8 bg-transparent border-2 border-secondary rounded-2xl text-white text-lg text-center font-medium transition-solid hover:bg-primary hover:border-transparent" download="Andromeda_Harahap_CV.png" href="#">Download My CV</a>
+            <a class="w-full md:w-auto py-3 px-0 md:px-8 bg-transparent border-2 border-secondary rounded-2xl text-white text-lg text-center font-medium transition-solid hover:bg-primary hover:border-transparent" href="src/images/CV_Andromeda Harahap_Software Developer.pdf" download="CV_Andromeda Harahap_Software Developer.pdf">Download My CV</a>
         </div>
     </section>
 
-    <footer class="w-full py-20 px-12 bg-backdrop-main relative overflow-hidden flex flex-col justify-center items-center">
-        <div class="w-full max-w-full mb-3 flex justify-start items-center">
+    <footer class="w-full py-20 px-12 bg-backdrop-main relative overflow-hidden gap-6 flex flex-col justify-center items-center">
+        <div class="w-full max-w-full flex justify-between items-center">
             <div class="gap-3 mb-5 grid md:flex grid-cols-2 md:grid-cols-none justify-center items-center">
-                <a class="py-2 px-6 bg-primary rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="index.html">Home</a>
-                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="profile.html">Profile</a>
-                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="works.html">Works</a>
-                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="experiences.html">Experiences</a>
+                <a class="py-2 px-6 bg-primary rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="#">Home</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="#profile">Profile</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="#works">Works</a>
+                <a class="py-2 px-6 bg-transparent hover:bg-backdrop rounded-lg text-white text-base text-center font-medium tracking-wide transition-solid" href="#experiences">Experiences</a>
             </div>
+
+            <div class="w-max h-auto gap-7 flex justify-center items-center">
+                <a class="w-12 h-12 p-4 text-red-gradient shadow-red rounded-full text-2xl text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://youtube.com/@code-muhashar"><i class="fa-brands fa-youtube"></i></a>
+                <a class="w-12 h-12 p-4 text-red-gradient shadow-red rounded-full text-2xl text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://instagram.com/qarh_project"><i class="fa-brands fa-instagram"></i></a>
+                <a class="w-12 h-12 p-4 text-red-gradient shadow-red rounded-full text-2xl text-center decoration-0 cursor-pointer flex justify-center items-center transition-all hover:text-hover-gradient" href="https://www.linkedin.com/in/andromeda-harahap-9b893030b/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>          
         </div>
         <div class="w-full gap-8 flex flex-col md:flex-row justify-start md:justify-between items-start">
             <p class="w-full text-white text-base md:text-xl text-center md:text-left font-normal tracking-wide">&copy; 2025-Andromeda-Harahap. All right reserved</p>
@@ -282,7 +501,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./src/js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
